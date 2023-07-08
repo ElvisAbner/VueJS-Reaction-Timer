@@ -51,6 +51,10 @@ button {
 
 }
 
+button:active {
+  box-shadow: 2px 2px 5px;
+}
+
 button[disabled] {
   opacity: 0.2;
   cursor: not-allowed;
