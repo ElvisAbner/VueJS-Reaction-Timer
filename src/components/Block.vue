@@ -1,5 +1,5 @@
 <template>
-    <div class="block"> 
+    <div class="block" v-show="showBlock"> 
         Click me
     </div>
 </template>
