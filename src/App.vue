@@ -1,6 +1,6 @@
 <template>
   <h1>Ninja Reaction Timer</h1>
-  <button @click="start" :disabled="isPlaying" :class="{ btnActive: !isPlaying }">Play</button>
+  <button @click="start" :disabled="isPlaying">Play</button>
   <button @click="isPlaying = false" :disabled="!isPlaying">End game</button>
   <Block v-if="isPlaying" :delay="delay" />
 </template>
@@ -51,13 +51,14 @@ button {
 
 }
 
-btnActive:active {
+button:active {
   box-shadow: 2px 2px 5px green;
 }
 
 button[disabled] {
   opacity: 0.2;
   cursor: not-allowed;
+  pointer-events: none;
 
 }
 </style>
