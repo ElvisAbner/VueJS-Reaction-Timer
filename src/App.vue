@@ -52,7 +52,7 @@ button {
 }
 
 button:active {
-  box-shadow: 2px 2px 5px;
+  box-shadow: 2px 2px 5px green;
 }
 
 button[disabled] {
