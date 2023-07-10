@@ -18,7 +18,7 @@ export default {
     }
   },
   methods: {
-    starts() {
+    start() {
       //set time amount (ms)
       this.delay = 2000 + Math.random() * 5000
       this.isPlaying = true
