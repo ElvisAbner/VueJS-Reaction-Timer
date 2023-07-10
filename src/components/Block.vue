@@ -9,7 +9,9 @@ export default {
     props: ['delay'],
     data() {
         return {
-            showBlock: false
+            showBlock: false,
+            timer: null,
+            ractionTime: 0
         }
     },
     mounted() {
@@ -18,13 +20,20 @@ export default {
            this.showBlock = true
            console.log(this.delay) 
         }, this.delay)
+
     },
-    updated() {
-        console.log('component updated')
-    },
-    unmounted() {
-        console.log('component unmounted')
-    },
+    
+    methods: {
+        startTimer() {
+            this.timer = setInterval(() => {
+               this.reactionTime += 10 
+            }, 10);
+        },
+        stopTimer() {
+            clearInterval(this.timer) 
+            this.$emit('end', this.reactionTime)
+        }
+    }
 }
 </script>
 
