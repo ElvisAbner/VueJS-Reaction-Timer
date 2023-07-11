@@ -18,7 +18,7 @@ export default {
       isPlaying: false,
       delay: null,
       showResult: false,
-      results: false
+      score: null
     }
   },
   methods: {
